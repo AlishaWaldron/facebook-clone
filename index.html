@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="font5/all.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Facebook Clone</title>
+  </head>
+  <body>
+    <header>
+      <div class="header__logo-section">
+        <div class="header__logo-icon">
+          <i class="fab fa-facebook"></i>
+        </div>
+        <div class="header__logo-search">
+          <i class="fas fa-search"></i>
+          <input type="text" />
+        </div>
+        <div class="header__mobile-button">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="header__menu-tabs">
+        <div class="header__menu-tab header__menu-tab--active">
+          <i class="fas fa-home"></i>
+        </div>
+        <div class="header__menu-tab">
+          <i class="fas fa-flag">
+            <div class="header__notification-bubble">3</div>
+          </i>
+        </div>
+        <div class="header__menu-tab">
+          <i class="fas fa-tv">
+            <div class="header__notification-bubble">9</div>
+          </i>
+        </div>
+        <div class="header__menu-tab">
+          <i class="fas fa-store"></i>
+        </div>
+        <div class="header__menu-tab">
+          <i class="fas fa-user"></i>
+        </div>
+      </div>
+
+      <div class="header__account">
+        <div class="header__action">
+          <img
+            src="https://randomuser.me/api/portraits/women/44.jpg"
+            class="header__user-img"
+          />
+          <span class="header__user-name">Dennisha W</span>
+          <a href="#" class="header__circle-link">
+            <i class="header__link-icon fas fa-plus"></i>
+          </a>
+          <a href="#" class="header__circle-link">
+            <i class="header__link-icon fab fa-facebook-messenger">
+              <div class="header__notification-bubbles">8</div>
+            </i>
+          </a>
+          <a href="#" class="header__circle-link">
+            <i class="header__link-icon fas fa-bell">
+              <div class="header__notification-bubbles">11</div>
+            </i>
+          </a>
+          <a href="#" class="header__circle-link">
+            <i class="header__link-icon fas fa-sort-down"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section class="content-area content-area--feed">
+      <section class="sidenav">
+        <div class="sidenav__item">
+          <img
+            src="https://randomuser.me/api/portraits/women/44.jpg"
+            class="sidenav__item-img"
+          />
+          <span class="sidenav__item-title"> Jane Doe </span>
+        </div>
+        <div class="sidenav__item">
+          <div class="sidenav__item-icon">
+            <i class="fas fa-user-friends"></i>
+          </div>
+          <span class="sidenav__item-title"> Friends </span>
+        </div>
+        <div class="sidenav__item">
+          <div class="sidenav__item-icon">
+            <i class="fas fa-flag"></i>
+          </div>
+          <span class="sidenav__item-title">
+            Pages
+            <span class="sidenav__item-notification">
+              <div class="sidenav__item-notification-circle"></div>
+              9+ new
+            </span>
+          </span>
+        </div>
+        <div class="sidenav__item">
+          <div class="sidenav__item-icon sidenav__item-icon--cirlce-white">
+            <i class="fas fa-users"></i>
+          </div>
+          <span class="sidenav__item-title">
+            Groups
+            <span class="sidenav__item-notification">
+              <div class="sidenav__item-notification-circle"></div>
+              3+ new
+            </span>
+          </span>
+        </div>
+        <div class="sidenav__item">
+          <div class="sidenav__item-icon">
+            <i class="fas fa-store"></i>
+          </div>
+          <span class="sidenav__item-title"> Marketplace </span>
+        </div>
+        <div class="sidenav__item">
+          <div class="sidenav__item-icon sidenav__item-icon--circle">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <span class="sidenav__item-title"> See more </span>
+        </div>
+        <div class="sidenav__line"></div>
+        <span class="sidenav__heading-title">Your Shortcuts</span>
+
+        <div class="sidenav__item">
+          <div class="sidenav__item-icon sidenav__item-icon--circle-white">
+            <i class="fas fa-user-friends"></i>
+          </div>
+          <span class="sidenav__item-title"> CodingPhase Groups </span>
+        </div>
+
+        <div class="sidenav__item">
+          <img
+            src="data:image/jpeg;base64,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"
+            class="sidenav__item-img"
+          />
+          <span class="sidenav__item-title">
+            Belize Land & Property For Sale By Owner
+          </span>
+        </div>
+        <div class="sidenav__item">
+          <img
+            src="https://pbs.twimg.com/profile_images/1421954589360861189/GC-o-31j_400x400.jpg"
+            class="sidenav__item-img"
+          />
+          <span class="sidenav__item-title"> No Pick Me Zone </span>
+        </div>
+        <div class="sidenav__item">
+          <img
+            src="http://p92.hu/binaries/content/gallery/p92website/technologies/htmlcssjs-overview.png"
+            class="sidenav__item-img"
+          />
+          <span class="sidenav__item-title"> HTML, CSS & Javascript </span>
+        </div>
+        
+        <div class="sidenav__item">
+          <img
+            src="https://www.christiesrealestate.com/blog/wp-content/uploads/2021/12/river-house-estate-telkwa-british-columbia-1.jpg"
+            class="sidenav__item-img"
+          />
+          <span class="sidenav__item-title"> Beautiful Log Homes </span>
+        </div>
+        <div class="sidenav__item">
+          <div class="sidenav__item-icon sidenav__item-icon--circle">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <span class="sidenav__item-title"> See more </span>
+        </div>
+      </section>
+      <!--section-->
+      <!--</section>-->
+      
+    <section>
+      <section class="feed">
+        <div class="stories">
+          <div class="stories__video-container">
+            <img
+              class="stories__bg"
+              src="http://images5.fanpop.com/image/photos/25600000/Papi-music-video-gif-jennifer-lopez-25640878-200-200.gif"
+              
+            />
+            <div class="stories__title">
+              <div class="stories__new-btn">
+                <i class="fas fa-plus"></i>
+              </div>
+              Create story
+            </div>
+          </div>
+          <div class="stories__video-container stories__video-container--plain">
+            <img
+              class="stories__bg"
+              src="https://thumbs.gfycat.com/WellmadeIncompatibleKid-max-1mb.gif"
+            />
+            <div class="stories__title">
+              <img
+                class="stories__user"
+                src="https://randomuser.me/api/portraits/women/95.jpg"
+              />
+              Cindy Bane
+            </div>
+          </div>
+
+          <div class="stories__video-container stories__video-container--plain">
+            <img
+              class="stories__bg"
+              src="https://thumbs.gfycat.com/RevolvingBlushingBronco-size_restricted.gif"
+            />
+            <div class="stories__title">
+              <img
+                class="stories__user"
+                src="https://randomuser.me/api/portraits/women/95.jpg"
+              />
+              Jennifer Smith
+            </div>
+          </div>
+          <div class="stories__video-container stories__video-container--plain">
+            <img
+              class="stories__bg"
+              src="http://gifs.gifburger.com/286-macklemore-ryan-lewis-downtown-official-music-video.gif"
+            />
+            <div class="stories__title">
+              <img
+                class="stories__user"
+                src="https://randomuser.me/api/portraits/men/95.jpg"
+              />
+              Billy <br />Ray
+            </div>
+          </div>
+          <div class="stories__video-container stories__video-container--plain">
+            <img
+              class="stories__bg"
+              src="http://24.media.tumblr.com/66f7f50b5f1a717926f88362b1bea000/tumblr_mgdugteKRZ1rmyejao1_500.gif"
+            />
+            <div class="stories__title">
+              <img
+                class="stories__user"
+                src="https://randomuser.me/api/portraits/men/95.jpg"
+              />
+              Dylan <br />Jean
+            </div>
+          </div>
+          <div class="stories__video-container stories__video-container--plain">
+            <img
+              class="stories__bg"
+              src="https://www.usmagazine.com/wp-content/uploads/2018/11/ariana-grande-thank-u-next-school-hallway-02.gif?quality=86&strip=all"
+            />
+            <div class="stories__title">
+              <img
+                class="stories__user"
+                src="https://randomuser.me/api/portraits/women/95.jpg"
+              />
+              Jerry <br /> Con
+            </div>
+          </div> 
+          
+          
+          
+        </div>
+        <div class="feed__box submitpost">
+        <div class="newpost">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg"
+          class="newpost__user-img">
+          <input type="text" placeholder="What's on your mind, Jane">
+        </div>
+        <div class="hline"></div>
+        <div class="post-type">
+          <div class="post-type__item">
+            <i class="fas fa-video"></i><span class="post-type__title">Live Video</span>
+          </div>
+          <div class="post-type__item">
+            <i class="fas fa-photo-video"></i><span class="post-type__title">Photo Video</span>
+          </div>
+          <div class="post-type__item">
+            <i class="fas fa-laugh-beam"></i><span class="post-type__title">Feeling/Activity</span>
+          </div>
+
+        </div>
+
+      </div>
+        
+     
+        
+          
+       
+
+
+
+      </div>
+        
+      <div class="feed__box photopost">
+        <div class="photopost__info">
+          <div class="photopost__left">
+            <img src="https://randomuser.me/api/portraits/men/44.jpg">
+            <div class="photopost__details">
+              <span class="photopost__name">James John</span>
+              <span class="photopost__date">December 17 at 7:01pm
+                <i class="fas fa-user-friends"></i>
+              </span>
+            </div>         
+
+          </div>
+          <i class="fas fa-ellipsis-h"></i>
+
+        </div>
+
+        <div class="photopost__description">
+          Hanging out with the bros.
+
+
+        </div>  
+        <div class="photopost__img">       
+        <img  src="https://i.scdn.co/image/ab6761610000e5eb60571cd7326957308bad6380">
+      </div> 
+
+      <div class="photopost__stats">
+        <div class="photopost__stats-emoji">
+          <div class="emoji-circle emoji-circle--blue">
+            <i class="fas fa-thumbs-up"></i>
+          </div>
+          <div class="emoji-circle emoji-circle--red">
+            <i class="fas fa-heart"></i>
+          </div>
+          <div class="emoji-circle emoji-circle--yellow">
+            <i class="fas fa-surprise"></i>
+          </div>
+          3.3k
+        </div>
+        <div class="photopost__stats-share">
+          788 Comments and 73 Shares
+        </div>
+      </div>
+      <div class="hline"></div>
+      <div class="photopost__action">
+        <a href="#" class="photopost__link">
+        <i class="fas fa-thumbs-up">Like</i></a>
+
+        <a href="#" class="photopost__link">
+        <i class="fas fa-comment">Comment</i></a>
+
+        <a href="#" class="photopost__link">
+        <i class="fas fa-share">Share</i></a>
+        
+      </div>
+      <div class="hline"></div>
+      </div>
+      
+      </section>
+    </section>
+   
+
+    <section class="floatingmsg">
+        
+      <div class="floatingmsg__bubble">
+        <i class="fas fa-edit"></i>
+      </div>
+    </section>
+
+    <section class="content__right-section">
+       
+        <div class="rightnav__icon-section">
+        <span class="rightnav__heading-title">Contacts</span> 
+        <div class="rightnav__icon-logo">
+        <div class="rightnav__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="fas__logo" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2V384c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 337.1V320 192 174.9l14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z"/></svg>
+      </div>
+        <div class="rightnav__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" class="fas__search" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg>
+      </div>
+        <div class="rightnav__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="fas__logo" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M120 256c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm160 0c0 30.9-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56zm104 56c-30.9 0-56-25.1-56-56s25.1-56 56-56s56 25.1 56 56s-25.1 56-56 56z"/></svg>
+      </div>
+      </div>
+    </div>    
+        
+
+       <div class="rightside__content">
+        <img src="https://i.pinimg.com/564x/8f/8d/fc/8f8dfce0b4d7f1a5d1a0dbc53378811c.jpg">
+        <span class="sidephoto__title-img">Auriel Soles</span>
+       </div>
+       <div class="rightside__content">
+        <img src="https://shotkit.com/wp-content/uploads/2020/07/headshots_image002.jpg">
+        <div class="floatinggreen__notification-right">5m</div>
+        <span class="sidephoto__title-img">Monky King</span>
+       </div>
+       <div class="rightside__content">
+        <img src="https://blog.ashleylauren.com/wp-content/uploads/2020/03/headshot.jpg">
+        <span class="sidephoto__title-img">Nekea Sanders</span>
+       </div>
+       <div class="rightside__content">
+        <img src="https://spacecoastdaily.com/wp-content/uploads/2021/03/HEADSHOT-600.jpg">
+        <div class="floatinggreen__notification-right">1h</div>
+        <span class="sidephoto__title-img">April Love</span>
+       </div>
+       <div class="rightside__content">
+        <img src="https://images.squarespace-cdn.com/content/v1/5aa5d49e297114f4397667c5/1583789037637-L39FVJGV7ER2KRFEMYOS/KDalton_Photography_Cincinnati_Business_Headshots_Brandon+Estrada2616+4.jpg">
+        <div class="floatinggreen__notification-right">37m</div>
+        <span class="sidephoto__title-img">Parvinder Singh</span>
+       </div>
+       <div class="rightside__content">
+        <img src="https://www.bethesdaheadshots.com/wp-content/uploads/2022/05/black-female-corporate-headshot-800.jpg">
+        <div class="floatinggreen__notification-right">59m</div>
+        <span class="sidephoto__title-img">Carol McNeely</span>
+       </div>
+       <div class="rightside__content">
+        <img src="https://cutewallpaper.org/24/young-man-pictures/300000-42579-best-5e126-young-1b0c9-man-d0573-photos-ba7be-%C2%B7-318fa-100-4251e-free-d8ca6-download---%C2%B7---pexels---stock---photos.jpeg">
+        
+      <span class="sidephoto__title-img">Miguel Angel</span>
+       </div>
+       <div class="rightside__content">
+        <img src="https://image1.masterfile.com/getImage/NjAwLTA2ODk5OTk4ZW4uMDAwMDAwMDA=ABBVZB/600-06899998en_Masterfile.jpg">
+        <div class="floatinggreen__notification-right">45m</div>
+        <span class="sidephoto__title-img">Timothy Smith</span>
+       </div>
+        
+       
+         
+         <div class="rightnav__line"></div>
+        
+         <span class="rightnav__heading-title">Group Conversation</span> 
+
+        <div class="lastside__content">
+         <svg xmlns="http://www.w3.org/2000/svg" class="circle__plus" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM232 344V280H168c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H280v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+        <span class="sidephoto__title-img">Create new group</span>
+        </div>
+      
+
+    </section>
+
+  </body>
+</html>
